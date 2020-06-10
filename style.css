@@ -1,0 +1,10 @@
+body {
+    background-image: url('../img/gif.gif');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 1400px 800px;
+  }
+
+#main-nav ul{
+ list-style-type:none;
+}
