@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+ <head>
+  <meta charset="UTF-8">
+  <title> Primeiro Teste Sistema Web</title>
+  {% load static %}
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+ </head>
+ <body id="main-page">
+  
+   <header id="octos-header">
+     <center>
+	<img src="{% static "img/logo.png" %}" alt="Logo">
+     </center>
+     <nav id="main-nav">
+       <ul>
+         <button class="main-btn btn-green"><li><a href="add">Adicionar câmera</a></li></button>
+         <button class="main-btn btn-orange"><li><a href="list">Listar câmeras</a></li></button>
+         <button class="main-btn btn-pink"><li><a href="remove">Remover câmera</a></li></button>
+       </ul>
+      </nav>
+    </header>
+  	   
+ </body>
+</html>
