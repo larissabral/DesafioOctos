@@ -77,8 +77,50 @@
  background-position: 80px 30px;
 }
 
-
 .btn-back {
+ color: #3c555c;
+ list-style-type:none;
+ font-size: 15px;
+ text-transform: uppercase;
+ font-weight: 700;
+ background-color: #fff;
+ border:3px solid #3c555c; 
+ border-radius: 8px;
+ text-decoration:none
+}
+
+
+.titulo {
+ color: #3c555c;
+ font-size: 22px;
+ font-weight: 700;
+ text-transform: uppercase;
+ margin-left: 20px;
+}
+
+.add-form{
+ color: #3c555c;
+ font-size: 20px;
+ font-weight: 700;
+ width:100%;
+ margin-left: 200px;
+}
+
+.add-form input[type=text], .add-form select{
+ width:70%;
+ height: 40px;
+}
+
+.add-form input[type=submit]{
+ cursor: pointer;
+ margin-left: 422px;
+}
+
+#cameras-select{
+ width:950px;
+}
+
+#btn-add{
  color: #3c555c;
  list-style-type:none;
  font-size: 15px;
@@ -89,9 +131,3 @@
  border-radius: 8px;
 }
 
-
-.btn-back:hover {
- color: #fff;
- background-color: #187bf7 ;
- box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
-}
