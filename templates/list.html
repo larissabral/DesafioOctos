@@ -17,6 +17,23 @@
      <button class="btn-back"><a href="../" style="text-decoration:none"> < Voltar</a></button>
      
    </header>
-     	   
+   <br><br>
+   <table border="1">
+    <tr>
+        <td>Nome</td>
+        <td>Fabricante</td>
+        <td>Número de Série</td>
+    </tr>
+    <tr>
+{% for obj in object_list %}
+        <td>{{ obj.nome }} </td>
+        <td>{{ obj.fabricante }}</td>
+        <td>{{ obj.serie }}</td>
+
+    </tr>
+{% endfor%}
+   </table>
+
+
  </body>
 </html>
