@@ -2,7 +2,7 @@ from django.shortcuts import render, get_object_or_404, redirect
 from django.http import HttpResponse
 from django.core.paginator import Paginator
 from .models import Post
-from .forms import PostForm
+from .forms import PostForm, AddForm
 from django.views.generic import ListView
 
 
@@ -20,9 +20,9 @@ def list(request):
 
 
 def add(request):
-    form = PostForm()
+    form = AddForm()
     if(request.method == 'POST'):
-        form = PostForm(request.POST)
+        form = AddForm(request.POST)
         if(form.is_valid()):
             post_nome = form.cleaned_data['nome']
             post_fabricante = form.cleaned_data['fabricante']
@@ -36,5 +36,14 @@ def add(request):
 
 
 def remove(request):
-   return render(request, "desafio/remove.html")
+    queryset = Post.objects.all()
+    context = {
+        'object_list': queryset
+    }
+    return render(request, "desafio/remove.html", context)
 
+
+def removeCamera(request, id):
+    obj = get_object_or_404(Post, pk=id)
+    obj.delete()
+    return redirect('desafio:remove')
