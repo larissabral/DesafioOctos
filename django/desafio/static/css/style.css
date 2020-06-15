@@ -34,8 +34,10 @@
   margin-right: 15px;
   font-size: 100px;
   width: 250px;
+  background-size: 80px;
+  background-repeat: no-repeat;
+  background-position: 80px 30px;
 }
-
 
 
 .btn-green:hover {
@@ -46,9 +48,6 @@
 .btn-green {
  background-color: #62d3bc;
  background-image:url("../img/add-video-camera.png");
- background-size: 80px;
- background-repeat: no-repeat;
- background-position: 80px 30px;
 }
 
 .btn-orange:hover {
@@ -59,9 +58,6 @@
 .btn-orange {
  background-color:#f5c982;
  background-image:url("../img/list-video-camera.png");
- background-size: 80px;
- background-repeat: no-repeat;
- background-position: 80px 30px;
 }
 
 .btn-pink:hover {
@@ -72,13 +68,9 @@
 .btn-pink {
  background-color: #f37fa3;
  background-image:url("../img/remove-video-camera.png");
- background-size: 80px;
- background-repeat: no-repeat;
- background-position: 80px 30px;
 }
 
-.btn-back {
- color: #3c555c;
+.btn-page {
  list-style-type:none;
  font-size: 15px;
  text-transform: uppercase;
@@ -89,6 +81,14 @@
  text-decoration:none
 }
 
+.btn-back a {
+ color: #3c555c;
+}
+
+.btn-page:hover {
+ background-color: #02a9b0;
+ box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
 
 .titulo {
  color: #3c555c;
@@ -116,18 +116,26 @@
  margin-left: 422px;
 }
 
-#cameras-select{
- width:950px;
+.tabela tr:first-child{
+ font-weight: bolder;
+ font-size: 23px;
 }
 
-#btn-add{
+.tabela, tr, td{
+ border: 3px solid #3c555c;
+ padding: 10px;
+}
+
+.tabela{
  color: #3c555c;
- list-style-type:none;
- font-size: 15px;
- text-transform: uppercase;
- font-weight: 700;
+ font-size: 20px;
  background-color: #fff;
- border:3px solid #3c555c; 
- border-radius: 8px;
+ width:80%;
+ margin-left: 10%;
+ border-collapse: collapse;
+ text-align: center;
 }
 
+#instaled-cameras ul{
+ list-style-type:none;
+}
