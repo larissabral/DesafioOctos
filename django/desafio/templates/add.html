@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+ <head>
+  <meta charset="UTF-8">
+  <title> Adicionar câmera </title>
+  {% load static %}
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+ </head>
+ <body id="page"> 
+   <header id="octos-header">
+     <center>
+	<img src="{% static "img/logo.png" %}" alt="Logo">
+     </center>
+     <div class="titulo">
+        Adicionar câmera <br>
+     </div>
+     <button class="btn-back"><a href="../" style="text-decoration:none"> < Voltar</a></button>
+    <br>   
+    <br>  
+    <br>    
+   </header>
+{% block content %}
+   <form name="" class="add-form" method="post" action="">
+     <label for="name">Nome da câmera:</label><br>
+       <input type="text" id="name" name="name" maxlength="50" placeholder="ex: Hall de Entrada." size="45" required><br><br>
+     <label for="serial-number">Número de Série:</label><br>
+       <input type="text" id="serial-number" name="serial-number" maxlength="16" placeholder="Apenas caracteres maiúsculos e números, sem espaço." size="45" required><br><br>
+     <label for="cameras-select">Escolha o fabricante:</label><br>
+       <select name="cameras-select" id="cameras-select" required>
+        <option value="" disabled selected>Selecione o fabricante</option>
+        <option value="secure">Secure Câmeras Inc</option>
+        <option value="surveillance">Surveillance Cams LLC</option>
+        <option value="digieye">DigiEye Group</option>
+        <option value="camerafi">CâmeraFi Inc</option>
+        <option value="vidmasters">VidMasters Inc</option>
+       </select>
+      <br><br>
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" id="btn-add" name="btn-add" value="Adicionar">
+   </form>
+{% endblock %}
+
+ </body>
+</html>
