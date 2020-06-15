@@ -1,0 +1,133 @@
+
+#main-page {
+    background-image: url('../img/gif.gif');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 1400px 800px;
+  }
+
+#page {
+ background-color:#187bf7;
+}
+
+#main-nav ul{
+ list-style-type:none;
+}
+
+
+#main-nav ul a {
+ text-decoration: none;
+ font-size: 16px;
+ text-transform: uppercase;
+ color: #3c555c;
+ font-weight: 700;
+}
+
+
+.main-btn {
+  border-radius: 12px;
+  border: 4px solid #3c555c; 
+  padding: 32px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin-right: 15px;
+  font-size: 100px;
+  width: 250px;
+}
+
+
+
+.btn-green:hover {
+ background-color: #41a388;
+ box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+.btn-green {
+ background-color: #62d3bc;
+ background-image:url("../img/add-video-camera.png");
+ background-size: 80px;
+ background-repeat: no-repeat;
+ background-position: 80px 30px;
+}
+
+.btn-orange:hover {
+ background-color: #cc8e63 ;
+ box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+.btn-orange {
+ background-color:#f5c982;
+ background-image:url("../img/list-video-camera.png");
+ background-size: 80px;
+ background-repeat: no-repeat;
+ background-position: 80px 30px;
+}
+
+.btn-pink:hover {
+ background-color: #d16675;
+ box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+.btn-pink {
+ background-color: #f37fa3;
+ background-image:url("../img/remove-video-camera.png");
+ background-size: 80px;
+ background-repeat: no-repeat;
+ background-position: 80px 30px;
+}
+
+.btn-back {
+ color: #3c555c;
+ list-style-type:none;
+ font-size: 15px;
+ text-transform: uppercase;
+ font-weight: 700;
+ background-color: #fff;
+ border:3px solid #3c555c; 
+ border-radius: 8px;
+ text-decoration:none
+}
+
+
+.titulo {
+ color: #3c555c;
+ font-size: 22px;
+ font-weight: 700;
+ text-transform: uppercase;
+ margin-left: 20px;
+}
+
+.add-form{
+ color: #3c555c;
+ font-size: 20px;
+ font-weight: 700;
+ width:100%;
+ margin-left: 200px;
+}
+
+.add-form input[type=text], .add-form select{
+ width:70%;
+ height: 40px;
+}
+
+.add-form input[type=submit]{
+ cursor: pointer;
+ margin-left: 422px;
+}
+
+#cameras-select{
+ width:950px;
+}
+
+#btn-add{
+ color: #3c555c;
+ list-style-type:none;
+ font-size: 15px;
+ text-transform: uppercase;
+ font-weight: 700;
+ background-color: #fff;
+ border:3px solid #3c555c; 
+ border-radius: 8px;
+}
+
