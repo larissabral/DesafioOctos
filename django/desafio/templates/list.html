@@ -5,6 +5,7 @@
   <title> Listar câmeras inseridas</title>
   {% load static %}
   <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
  </head>
  <body id="page"> 
    <header id="octos-header">
@@ -14,11 +15,11 @@
      <div class="titulo">
         Listar Câmeras Inseridas <br>
      </div>
-     <button class="btn-back"><a href="../" style="text-decoration:none"> < Voltar</a></button>
+     <button class="btn-page btn-back"><a href="../" style="text-decoration:none"> < Voltar</a></button>
      
    </header>
    <br><br>
-   <table border="1">
+   <table class="tabela" >
     <tr>
         <td>Nome</td>
         <td>Fabricante</td>
