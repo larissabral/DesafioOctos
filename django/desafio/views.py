@@ -1,6 +1,8 @@
 from django.shortcuts import render, get_object_or_404, redirect
 from django.http import HttpResponse
 from django.core.paginator import Paginator
+from django.core.exceptions import ValidationError
+from django.contrib import messages
 from .models import Post
 from .forms import PostForm, AddForm
 from django.views.generic import ListView
@@ -27,9 +29,13 @@ def add(request):
             post_nome = form.cleaned_data['nome']
             post_fabricante = form.cleaned_data['fabricante']
             post_serie = form.cleaned_data['serie']
-            new_post = Post(nome=post_nome, fabricante=post_fabricante, serie=post_serie)
-            new_post.save()
-            return redirect('desafio:list')
+            if (Post.objects.filter(serie=post_serie).exists()):
+               messages.success(request, 'Esse Número de Série já existe! Por favor entre com outro!')
+               return redirect('desafio:add')
+            else:
+               new_post = Post(nome=post_nome, fabricante=post_fabricante, serie=post_serie)
+               new_post.save()
+               return redirect('desafio:list')
     elif(request.method == 'GET'):
         return render(request, 'desafio/add.html', {'form': form})
 
