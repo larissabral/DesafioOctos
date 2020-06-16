@@ -4,7 +4,7 @@ from django.core.paginator import Paginator
 from django.core.exceptions import ValidationError
 from django.contrib import messages
 from .models import Camera
-from .forms import CameraForm, AddForm
+from .forms import AddForm
 from django.views.generic import ListView
 
 
