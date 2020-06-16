@@ -9,10 +9,10 @@ class SerieField(models.CharField):
         return value.upper()
 
 
-class Post(models.Model):
-    nome      = models.CharField(max_length=50)
-    fabricante = models.CharField(max_length=15)
-    serie       = SerieField(max_length=16)
+class Camera(models.Model):
+    nome      = models.CharField(max_length=50, default='nome')
+    fabricante = models.CharField(max_length=50, default='fabricante')
+    serie       = SerieField(max_length=16, default='serie')
 
 
 

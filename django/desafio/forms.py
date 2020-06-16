@@ -1,9 +1,9 @@
 from django import forms
-from .models import Post
+from .models import Camera
 
-class PostForm(forms.ModelForm):
+class CameraForm(forms.ModelForm):
     class Meta:
-        model = Post
+        model = Camera
         fields = ['nome', 'fabricante', 'serie']
 
 

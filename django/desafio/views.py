@@ -3,8 +3,8 @@ from django.http import HttpResponse
 from django.core.paginator import Paginator
 from django.core.exceptions import ValidationError
 from django.contrib import messages
-from .models import Post
-from .forms import PostForm, AddForm
+from .models import Camera
+from .forms import CameraForm, AddForm
 from django.views.generic import ListView
 
 
@@ -14,7 +14,7 @@ def homePage(request):
    return render(request, "desafio/index.html")
 
 def list(request):
-    queryset = Post.objects.all()
+    queryset = Camera.objects.all()
     context = {
         'object_list': queryset
     }
@@ -26,15 +26,15 @@ def add(request):
     if(request.method == 'POST'):
         form = AddForm(request.POST)
         if(form.is_valid()):
-            post_nome = form.cleaned_data['nome']
-            post_fabricante = form.cleaned_data['fabricante']
-            post_serie = form.cleaned_data['serie']
-            if (Post.objects.filter(serie=post_serie).exists()):
+            camera_nome = form.cleaned_data['nome']
+            camera_fabricante = form.cleaned_data['fabricante']
+            camera_serie = form.cleaned_data['serie']
+            if (Camera.objects.filter(serie=camera_serie).exists()):
                messages.success(request, 'Esse Número de Série já existe! Por favor entre com outro!')
                return redirect('desafio:add')
             else:
-               new_post = Post(nome=post_nome, fabricante=post_fabricante, serie=post_serie)
-               new_post.save()
+               new_camera = Camera(nome=camera_nome, fabricante=camera_fabricante, serie=camera_serie)
+               new_camera.save()
                return redirect('desafio:list')
     elif(request.method == 'GET'):
         return render(request, 'desafio/add.html', {'form': form})
@@ -42,7 +42,7 @@ def add(request):
 
 
 def remove(request):
-    queryset = Post.objects.all()
+    queryset = Camera.objects.all()
     context = {
         'object_list': queryset
     }
@@ -50,6 +50,6 @@ def remove(request):
 
 
 def removeCamera(request, id):
-    obj = get_object_or_404(Post, pk=id)
+    obj = get_object_or_404(Camera, pk=id)
     obj.delete()
     return redirect('desafio:remove')
