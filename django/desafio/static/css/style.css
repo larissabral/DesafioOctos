@@ -19,6 +19,10 @@
  list-style-type:none;
 }
 
+#main-nav ul li {
+  display: inline;
+}
+
 /*Edicao do conteudo dos links dos botoes da pagina principal*/
 #main-nav ul a {
  text-decoration: none;
@@ -38,10 +42,11 @@
   display: inline-block;
   margin-right: 15px;
   font-size: 100px;
-  width: 250px;
+  width: 150px;
+  height: 100px;
   background-size: 80px;
   background-repeat: no-repeat;
-  background-position: 80px 30px;
+  background-position: 70px 80px;
 }
 
 /*Mudanca do botao verde quando o cursor passa por cima, pagina principal*/

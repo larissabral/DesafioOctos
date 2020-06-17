@@ -11,14 +11,14 @@ from django.views.generic import ListView
 # Create your views here.
 
 def homePage(request):
-   return render(request, "desafio/index.html")
+   return render(request, "index.html")
 
 def list(request):
     queryset = Camera.objects.all()
     context = {
         'object_list': queryset
     }
-    return render(request, "desafio/list.html", context)
+    return render(request, "list.html", context)
 
 
 def add(request):
@@ -37,7 +37,7 @@ def add(request):
                new_camera.save()
                return redirect('desafio:list')
     elif(request.method == 'GET'):
-        return render(request, 'desafio/add.html', {'form': form})
+        return render(request, 'add.html', {'form': form})
 
 
 
