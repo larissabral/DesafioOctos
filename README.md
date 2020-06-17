@@ -1,9 +1,9 @@
 # DesafioOctos
 Desafio de Estágio Octos
 
-A sua tarefa é desenvolver um sistema web para cadastro de câmeras como parte do sistema de video-analítico que você está construindo.
+A tarefa é desenvolver um sistema web para cadastro de câmeras como parte do sistema de video-analítico que você está construindo.
 
-Requisitos Funcionais
+# Requisitos Funcionais
 
 Esse sistema deverá permitir o cadastro de câmeras, contendo um nome da câmera para um humano identificá-la (ex: "Jardim", "Hall de Entrada") fabricante e número de série.
 
@@ -16,7 +16,6 @@ O campo fabricante deverá ser selecionado de uma lista, sendo os possíveis fab
   -Surveillance Cams LLC
   
   -DigiEye Group
-  
   
   -CâmeraFi Inc
   
@@ -32,7 +31,7 @@ O sistema deverá permitir:
   
   -Adicionar nova câmera
 
-Requisitos Não Funcionais
+# Requisitos Não Funcionais
 
   -A interface gráfica deverá funcionar pelo menos em um navegador moderno recente (Chrome, Firefox, Safari, etc).
   
@@ -43,3 +42,12 @@ Requisitos Não Funcionais
   -A comunicação entre a interface (frontend) e o resto do sistema (backend) deverá ser feita através de uma API JSON.
   
   -Os dados do sistema deverão persistir "restarts" (isto é, deverão salvar os dados em algum banco de dados ou arquivo no computador).
+  
+  # Framework Backend
+  Está sendo utilizado o Django para criar APIs backend. Para saber mais: https://www.djangoproject.com/start/
+  
+  # Organização do código
+  
+  A pasta django se refere a pasta root do projeto. A pasta octos é a pasta do projeto (criada ao executar o comando: django-admin startproject octos). A pasta desafio é o aplicativo (criado ao executar o comando dentro da sua pasta principal (fora da pasta
+meu-site): python manage.py startapp app) e dentro dela estão todos os arquivos criados.
+ Para entender mas sobre a organização do django, acesse: https://docs.djangoproject.com/en/3.0/intro/tutorial01/
