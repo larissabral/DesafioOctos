@@ -4,9 +4,9 @@ from . import views
 app_name = "desafio"
 
 urlpatterns = [
-    path('', views.homePage),
+    path('', views.home_page),
     path('add/', views.add, name='add'),
     path('list/', views.list, name='list'),
     path('remove/', views.remove, name='remove'),
-    path('removeCamera/<int:id>', views.removeCamera, name='removeCamera'),
+    path('removeCamera/<int:id>', views.remove_camera, name='removeCamera'),
 ]

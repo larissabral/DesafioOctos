@@ -10,7 +10,7 @@ from django.views.generic import ListView
 
 # Create your views here.
 
-def homePage(request):
+def home_page(request):
    return render(request, "desafio/index.html")
 
 def list(request):
@@ -49,7 +49,7 @@ def remove(request):
     return render(request, "desafio/remove.html", context)
 
 
-def removeCamera(request, id):
+def remove_camera(request, id):
     obj = get_object_or_404(Camera, pk=id)
     obj.delete()
     return redirect('desafio:remove')
