@@ -10,12 +10,12 @@
  <body id="page"> 
    <header id="octos-header">
      <center>
-	<img src="{% static "img/logo.png" %}" alt="Logo">
+	<img src="{% static 'img/logo.png' %}" alt="Logo">
      </center>
      <div class="titulo">
         Remover câmera <br>
      </div>
-     <button class="btn-page btn-back"><a href="../" style="text-decoration:none"> < Voltar</a></button>
+     <button class="btn-page btn-back"><a href="{% url 'desafio:index' %}" style="text-decoration:none"> < Voltar</a></button>
      
    </header>
    <br><br>
@@ -37,7 +37,7 @@
 	        <td>{{ obj.nome }} </td>
 	        <td>{{ obj.fabricante }}</td>
 	        <td>{{ obj.serie }}</td>
-                <td><a class ="btn btn-lg" href="../removeCamera/{{obj.id}}"><span>
+                <td><a class ="btn btn-lg" href="{% url 'desafio:removeCamera' %}/{{obj.id}}"><span>
                     <i class="glyphicon glyphicon-trash" style="color:red"></i></span></a>
                     </td>
 	    </tr>
