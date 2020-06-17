@@ -4,7 +4,7 @@ from . import views
 app_name = "desafio"
 
 urlpatterns = [
-    path('', views.home_page),
+    path('', views.home_page, name='index'),
     path('add/', views.add, name='add'),
     path('list/', views.list, name='list'),
     path('remove/', views.remove, name='remove'),
