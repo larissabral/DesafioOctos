@@ -123,7 +123,6 @@ STATIC_URL = '/static/'
 
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static"),
-    '\laris\Desktop\desafio octos\desafio\static',
 ]
 
 
