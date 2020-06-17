@@ -12,7 +12,7 @@ class SerieField(models.CharField):
 class Camera(models.Model):
     nome      = models.CharField(max_length=50, default='nome')
     fabricante = models.CharField(max_length=50, default='fabricante')
-    serie       = SerieField(max_length=16, default='serie')
+    serie       = SerieField(max_length=16, default='serie', unique=True)
 
 
 
