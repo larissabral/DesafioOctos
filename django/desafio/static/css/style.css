@@ -44,11 +44,11 @@
   display: inline-block;
   margin-right: 15px;
   font-size: 100px;
-  width: 150px;
-  height: 100px;
+  width: 250px; 
+  height: 190px;
   background-size: 80px;
   background-repeat: no-repeat;
-  background-position: 70px 80px;
+  background-position: 80px 30px;
 }
 
 /*Mudanca do botao verde quando o cursor passa por cima, pagina principal*/
