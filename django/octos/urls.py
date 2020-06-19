@@ -15,8 +15,15 @@ Including another URLconf
 """
 from django.urls import path, include
 from django.contrib import admin
+from desafio.views import CameraViewSet
+from rest_framework import routers
+
+router = routers.DefaultRouter()
+router.register(r'cameras', CameraViewSet)
 
 urlpatterns = [
-   # path('admin/', admin.site.urls),
-    path('', include("desafio.urls"))
+    path('admin/', admin.site.urls),
+    path('', include("desafio.urls")),
+    path('', include(router.urls)),
+    path('api-auth/', include('rest_framework.urls'))
 ]
