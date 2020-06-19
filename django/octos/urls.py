@@ -24,6 +24,8 @@ router.register(r'cameras', CameraViewSet)
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include("desafio.urls")),
+
+# REST FRAMEWORK URLS
     path('', include(router.urls)),
     path('api-auth/', include('rest_framework.urls'))
 ]
