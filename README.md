@@ -50,12 +50,15 @@ O sistema deverá permitir:
   
   A pasta django se refere a pasta root do projeto. A pasta octos é a pasta do projeto (criada ao executar o comando: django-admin startproject octos). A pasta desafio é o aplicativo (criado ao executar o comando dentro da sua pasta principal (fora da pasta
 meu-site): python manage.py startapp app) e dentro dela estão todos os arquivos criados.
+
  Para entender mas sobre a organização do django, acesse: https://docs.djangoproject.com/en/3.0/intro/tutorial01/
  
  # Como dar start
  
   Primeiro, instale o Python 3.8.3 na sua máquina. Você deverá ter instalado também o pip, que é o gerenciador de pacotes do Python. (Para instalar o “pip” na sua máquina, acesse https://pip.pypa.io/en/latest/installing/, e siga as instruções Installing with get-pip.py.). 
+  
   Segundo, instale o django em sua máquina. (Pode ser instalado executando o comando: pip install django). Para entender mais sobre o django, acesse: https://www.djangoproject.com/start/ .
+  
   Terceiro, baixe esse repositório em sua máquina.
   
   
