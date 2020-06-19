@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'rest_framework',
 ]
 
 MIDDLEWARE = [
@@ -56,7 +57,7 @@ ROOT_URLCONF = 'octos.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-       # 'DIRS': [r'C:\Users\laris\Desktop\desafio octos\templates'],
+        #'DIRS': [r'C:\Users\laris\Desktop\desafio octos\templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
