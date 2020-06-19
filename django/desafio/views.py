@@ -6,9 +6,18 @@ from django.contrib import messages
 from .models import Camera
 from .forms import AddForm
 from django.views.generic import ListView
+from rest_framework import viewsets
+from .serializers import CameraSerializer
 
 
 # Create your views here.
+
+# view da api Rest 
+class CameraViewSet(viewsets.ModelViewSet):
+    queryset = Camera.objects.all()
+    serializer_class = CameraSerializer
+
+
 
 def home_page(request):
    return render(request, "index.html")
