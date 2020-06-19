@@ -37,7 +37,7 @@
 	        <td>{{ obj.nome }} </td>
 	        <td>{{ obj.fabricante }}</td>
 	        <td>{{ obj.serie }}</td>
-                <td><a class ="btn btn-lg" href="{% url 'desafio:removeCamera' %}/{{obj.id}}"><span>
+                <td><a class ="btn btn-lg" href="{% url 'desafio:index' %}removeCamera/{{obj.id}}"><span>
                     <i class="glyphicon glyphicon-trash" style="color:red"></i></span></a>
                     </td>
 	    </tr>
