@@ -57,9 +57,11 @@ meu-site): python manage.py startapp app) e dentro dela estão todos os arquivos
  
   Primeiro, instale o Python 3.8.3 na sua máquina. Você deverá ter instalado também o pip, que é o gerenciador de pacotes do Python. (Para instalar o “pip” na sua máquina, acesse https://pip.pypa.io/en/latest/installing/, e siga as instruções Installing with get-pip.py.). 
   
-  Segundo, instale o django em sua máquina. (Pode ser instalado executando o comando: pip install django). Para entender mais sobre o django, acesse: https://www.djangoproject.com/start/ .
+  Segundo, instale o arquivo requirements.txt, que irá instalar o django e tudo que você precisará para utilizar o sistema web, utilizando o comando: pip install -r requirements.txt (atenção para: você deve estar dentro do diretório onde se encontra o arquivo). Para entender mais sobre o django, acesse: https://www.djangoproject.com/start/ .
   
   Terceiro, baixe esse repositório em sua máquina.
+  
+  Quarto, entre na pasta principal do projeto (django) pela linha de comando do terminal, e execute o comando: python manage.py runserver.
   
   
  
