@@ -1,24 +1,25 @@
 from django.shortcuts import render, get_object_or_404, redirect
 from django.http import HttpResponse
-from django.core.paginator import Paginator
 from django.core.exceptions import ValidationError
 from django.contrib import messages
 from .models import Camera
 from .forms import AddForm
-from django.views.generic import ListView
-from rest_framework import viewsets
 from .serializers import CameraSerializer
+from rest_framework import generics
 
 
-# Create your views here.
-
-# view da api Rest 
-class CameraViewSet(viewsets.ModelViewSet):
+# views da api Rest 
+class CameraList(generics.ListCreateAPIView):
     queryset = Camera.objects.all()
     serializer_class = CameraSerializer
 
 
+class CameraDetail(generics.RetrieveUpdateDestroyAPIView):
+    queryset = Camera.objects.all()
+    serializer_class = CameraSerializer
 
+
+#views do frontend
 def home_page(request):
    return render(request, "index.html")
 
