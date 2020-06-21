@@ -11,7 +11,7 @@ urlpatterns = [
     path('remove/', views.remove, name='remove'),
     path('removeCamera/<int:id>', views.remove_camera, name='removeCamera'),
 
-#API 
+    # API
     path('cameras/', views.CameraList.as_view()),
     path('cameras/<int:pk>/', views.CameraDetail.as_view()),
 ]

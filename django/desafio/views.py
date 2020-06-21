@@ -1,6 +1,4 @@
 from django.shortcuts import render, get_object_or_404, redirect
-from django.http import HttpResponse
-from django.core.exceptions import ValidationError
 from django.contrib import messages
 from .models import Camera
 from .forms import AddForm
@@ -8,7 +6,7 @@ from .serializers import CameraSerializer
 from rest_framework import generics
 
 
-# views da api Rest 
+# views da api Rest
 class CameraList(generics.ListCreateAPIView):
     queryset = Camera.objects.all()
     serializer_class = CameraSerializer
@@ -19,9 +17,10 @@ class CameraDetail(generics.RetrieveUpdateDestroyAPIView):
     serializer_class = CameraSerializer
 
 
-#views do frontend
+# views do frontend
 def home_page(request):
-   return render(request, "index.html")
+    return render(request, "index.html")
+
 
 def list(request):
     queryset = Camera.objects.all()
@@ -40,15 +39,17 @@ def add(request):
             camera_fabricante = form.cleaned_data['fabricante']
             camera_serie = form.cleaned_data['serie']
             if (Camera.objects.filter(serie=camera_serie).exists()):
-               messages.success(request, 'Esse Número de Série já existe! Por favor entre com outro!')
-               return redirect('desafio:add')
+                messages.success(request,
+                                 'Esse Número de Série já existe! Por favor entre com outro!')
+                return redirect('desafio:add')
             else:
-               new_camera = Camera(nome=camera_nome, fabricante=camera_fabricante, serie=camera_serie)
-               new_camera.save()
-               return redirect('desafio:list')
+                new_camera = Camera(nome=camera_nome,
+                                    fabricante=camera_fabricante,
+                                    serie=camera_serie)
+                new_camera.save()
+                return redirect('desafio:list')
     elif(request.method == 'GET'):
         return render(request, 'add.html', {'form': form})
-
 
 
 def remove(request):
